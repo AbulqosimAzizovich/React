@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+header{
+  border-bottom: 0.5px solid #000000; 
+}
