@@ -6,13 +6,16 @@ import image1 from "./assets/IMAGE1.png";
 import image2 from "./assets/IMAGE2.png";
 import image3 from "./assets/IMAGE3.png";
 import image4 from "./assets/lg.png";
+import { data1 } from "./components/data";
+import { data2 } from "./components/data";
+import { data3 } from "./components/data";
 
 
-
+import Card from "./components/card";
+import Card1 from "./components/card1";
 
 function App() {
   const [count, setCount] = useState(0);
-
   return (
     <>
       <header>
@@ -58,126 +61,24 @@ function App() {
           <div className="max-w-[1200px] mx-auto ">
             <div className="wrapper">
               <div className="flex items-center gap-x-5 mb-6">
-                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
-                    <img class="rounded-t-lg" src={image1} alt="" />
-                  </a>
-                  <div class="p-5">
-                    <p className="text-[#999999] text-[10px] mb-[18px]">
-                      Photography
-                    </p>
-
-                    <h5 class="mb-2 text-[20px] font-normal tracking-tight text-[#000000] dark:text-white">
-                      Helmut Lang celebrates taxi drivers worldwide in latest
-                      campaign
-                    </h5>
-
-                    <p class="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400">
-                      Alessandra Ortiz
-                    </p>
-                  </div>
-                </div>
-
-                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
-                    <img class="rounded-t-lg" src={image1} alt="" />
-                  </a>
-                  <div class="p-5">
-                    <p className="text-[#999999] text-[10px] mb-[18px]">
-                      Photography
-                    </p>
-
-                    <h5 class="mb-2 text-[20px] font-normal tracking-tight text-[#000000] dark:text-white">
-                      Helmut Lang celebrates taxi drivers worldwide in latest
-                      campaign
-                    </h5>
-
-                    <p class="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400">
-                      Alessandra Ortiz
-                    </p>
-                  </div>
-                </div>
-
-                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
-                    <img class="rounded-t-lg" src={image1} alt="" />
-                  </a>
-                  <div class="p-5">
-                    <p className="text-[#999999] text-[10px] mb-[18px]">
-                      Photography
-                    </p>
-
-                    <h5 class="mb-2 text-[20px] font-normal tracking-tight text-[#000000] dark:text-white">
-                      Helmut Lang celebrates taxi drivers worldwide in latest
-                      campaign
-                    </h5>
-
-                    <p class="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400">
-                      Alessandra Ortiz
-                    </p>
-                  </div>
-                </div>
+                {data1.map((e) => (
+                  <Card
+                    title={e.title}
+                    image={e.image}
+                    about={e.about}
+                    by={e.by}
+                  />
+                ))}
               </div>
               <div className="flex items-center gap-x-5 mb-6">
-                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
-                    <img class="rounded-t-lg" src={image1} alt="" />
-                  </a>
-                  <div class="p-5">
-                    <p className="text-[#999999] text-[10px] mb-[18px]">
-                      Photography
-                    </p>
-
-                    <h5 class="mb-2 text-[20px] font-normal tracking-tight text-[#000000] dark:text-white">
-                      Helmut Lang celebrates taxi drivers worldwide in latest
-                      campaign
-                    </h5>
-
-                    <p class="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400">
-                      Alessandra Ortiz
-                    </p>
-                  </div>
-                </div>
-
-                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
-                    <img class="rounded-t-lg" src={image1} alt="" />
-                  </a>
-                  <div class="p-5">
-                    <p className="text-[#999999] text-[10px] mb-[18px]">
-                      Photography
-                    </p>
-
-                    <h5 class="mb-2 text-[20px] font-normal tracking-tight text-[#000000] dark:text-white">
-                      Helmut Lang celebrates taxi drivers worldwide in latest
-                      campaign
-                    </h5>
-
-                    <p class="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400">
-                      Alessandra Ortiz
-                    </p>
-                  </div>
-                </div>
-
-                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
-                    <img class="rounded-t-lg" src={image1} alt="" />
-                  </a>
-                  <div class="p-5">
-                    <p className="text-[#999999] text-[10px] mb-[18px]">
-                      Photography
-                    </p>
-
-                    <h5 class="mb-2 text-[20px] font-normal tracking-tight text-[#000000] dark:text-white">
-                      Helmut Lang celebrates taxi drivers worldwide in latest
-                      campaign
-                    </h5>
-
-                    <p class="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400">
-                      Alessandra Ortiz
-                    </p>
-                  </div>
-                </div>
+                {data2.map((e) => (
+                  <Card
+                    title={e.title}
+                    image={e.image}
+                    about={e.about}
+                    by={e.by}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -189,168 +90,27 @@ function App() {
               <p className="text-[#999999] text-[10px] mb-[30px]">
                 LATEST POSTS
               </p>
+
               <div className="flex items-center gap-x-[10px] mb-[50px]">
-                <div class="max-w-[305px] px-[10px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
-                    <img class="rounded-t-lg" src={image2} alt="" />
-                  </a>
-                  <div class="p-5">
-                    <p className="text-[#999999] text-[10px] mb-[18px]">
-                      Illustration
-                    </p>
-
-                    <h5 class="mb-2 text-[19px] uppercase font-normal tracking-tight text-[#000000] dark:text-white">
-                      Japan House opens in mountainside to foster peak
-                      creativity.
-                    </h5>
-
-                    <p class="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400">
-                      Alessandra Ortiz
-                    </p>
-                  </div>
-                </div>
-
-                <div class="max-w-[305px] px-[10px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
-                    <img class="rounded-t-lg" src={image2} alt="" />
-                  </a>
-                  <div class="p-5">
-                    <p className="text-[#999999] text-[10px] mb-[18px]">
-                      Illustration
-                    </p>
-
-                    <h5 class="mb-2 text-[19px] uppercase font-normal tracking-tight text-[#000000] dark:text-white">
-                      Japan House opens in mountainside to foster peak
-                      creativity.
-                    </h5>
-
-                    <p class="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400">
-                      Alessandra Ortiz
-                    </p>
-                  </div>
-                </div>
-
-                <div class="max-w-[305px] px-[10px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
-                    <img class="rounded-t-lg" src={image2} alt="" />
-                  </a>
-                  <div class="p-5">
-                    <p className="text-[#999999] text-[10px] mb-[18px]">
-                      Illustration
-                    </p>
-
-                    <h5 class="mb-2 text-[19px] uppercase font-normal tracking-tight text-[#000000] dark:text-white">
-                      Japan House opens in mountainside to foster peak
-                      creativity.
-                    </h5>
-
-                    <p class="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400">
-                      Alessandra Ortiz
-                    </p>
-                  </div>
-                </div>
-
-                <div class="max-w-[305px] px-[10px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
-                    <img class="rounded-t-lg" src={image2} alt="" />
-                  </a>
-                  <div class="p-5">
-                    <p className="text-[#999999] text-[10px] mb-[18px]">
-                      Illustration
-                    </p>
-
-                    <h5 class="mb-2 text-[19px] uppercase font-normal tracking-tight text-[#000000] dark:text-white">
-                      Japan House opens in mountainside to foster peak
-                      creativity.
-                    </h5>
-
-                    <p class="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400">
-                      Alessandra Ortiz
-                    </p>
-                  </div>
-                </div>
+                {data3.map((e) => (
+                  <Card1
+                    title={e.title}
+                    image={e.image}
+                    about={e.about}
+                    by={e.by}
+                  />
+                ))}
               </div>
 
               <div className="flex items-center gap-x-[10px] mb-[50px]">
-                <div class="max-w-[305px] px-[10px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
-                    <img class="rounded-t-lg" src={image2} alt="" />
-                  </a>
-                  <div class="p-5">
-                    <p className="text-[#999999] text-[10px] mb-[18px]">
-                      Illustration
-                    </p>
-
-                    <h5 class="mb-2 text-[19px] uppercase font-normal tracking-tight text-[#000000] dark:text-white">
-                      Japan House opens in mountainside to foster peak
-                      creativity.
-                    </h5>
-
-                    <p class="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400">
-                      Alessandra Ortiz
-                    </p>
-                  </div>
-                </div>
-
-                <div class="max-w-[305px] px-[10px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
-                    <img class="rounded-t-lg" src={image2} alt="" />
-                  </a>
-                  <div class="p-5">
-                    <p className="text-[#999999] text-[10px] mb-[18px]">
-                      Illustration
-                    </p>
-
-                    <h5 class="mb-2 text-[19px] uppercase font-normal tracking-tight text-[#000000] dark:text-white">
-                      Japan House opens in mountainside to foster peak
-                      creativity.
-                    </h5>
-
-                    <p class="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400">
-                      Alessandra Ortiz
-                    </p>
-                  </div>
-                </div>
-
-                <div class="max-w-[305px] px-[10px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
-                    <img class="rounded-t-lg" src={image2} alt="" />
-                  </a>
-                  <div class="p-5">
-                    <p className="text-[#999999] text-[10px] mb-[18px]">
-                      Illustration
-                    </p>
-
-                    <h5 class="mb-2 text-[19px] uppercase font-normal tracking-tight text-[#000000] dark:text-white">
-                      Japan House opens in mountainside to foster peak
-                      creativity.
-                    </h5>
-
-                    <p class="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400">
-                      Alessandra Ortiz
-                    </p>
-                  </div>
-                </div>
-
-                <div class="max-w-[305px] px-[10px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
-                    <img class="rounded-t-lg" src={image2} alt="" />
-                  </a>
-                  <div class="p-5">
-                    <p className="text-[#999999] text-[10px] mb-[18px]">
-                      Illustration
-                    </p>
-
-                    <h5 class="mb-2 text-[19px] uppercase font-normal tracking-tight text-[#000000] dark:text-white">
-                      Japan House opens in mountainside to foster peak
-                      creativity.
-                    </h5>
-
-                    <p class="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400">
-                      Alessandra Ortiz
-                    </p>
-                  </div>
-                </div>
+                {data3.map((e) => (
+                  <Card1
+                    title={e.title}
+                    image={e.image}
+                    about={e.about}
+                    by={e.by}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -364,39 +124,39 @@ function App() {
               </p>
 
               <div className="flex items-center gap-x-[10px] mb-5">
-                <div class="max-w-[610px] px-[10px] py-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div className="max-w-[610px] px-[10px] py-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                   <a href="#">
-                    <img class="rounded-t-lg" src={image3} alt="" />
+                    <img className="rounded-t-lg" src={image3} alt="" />
                   </a>
-                  <div class="p-5">
+                  <div className="p-5">
                     <p className="text-[#999999] text-[10px] mb-[18px]">
                       Graphic Design
                     </p>
 
-                    <h5 class="mb-2 text-[19px] uppercase font-normal tracking-tight text-[#000000] dark:text-white">
+                    <h5 className="mb-2 text-[19px] uppercase font-normal tracking-tight text-[#000000] dark:text-white">
                       A Brief History of the FIFA World Cup Logo
                     </h5>
 
-                    <p class="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400 uppercase">
+                    <p className="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400 uppercase">
                       By Clem Onojeghuo
                     </p>
                   </div>
                 </div>
 
-                <div class="max-w-[610px] px-[10px] py-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div className="max-w-[610px] px-[10px] py-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                   <a href="#">
-                    <img class="rounded-t-lg" src={image3} alt="" />
+                    <img className="rounded-t-lg" src={image3} alt="" />
                   </a>
-                  <div class="p-5">
+                  <div className="p-5">
                     <p className="text-[#999999] text-[10px] mb-[18px]">
                       Graphic Design
                     </p>
 
-                    <h5 class="mb-2 text-[19px] uppercase font-normal tracking-tight text-[#000000] dark:text-white">
+                    <h5 className="mb-2 text-[19px] uppercase font-normal tracking-tight text-[#000000] dark:text-white">
                       A Brief History of the FIFA World Cup Logo
                     </h5>
 
-                    <p class="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400 uppercase">
+                    <p className="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400 uppercase">
                       By Clem Onojeghuo
                     </p>
                   </div>
@@ -404,39 +164,39 @@ function App() {
               </div>
 
               <div className="flex items-center gap-x-[10px] mb-5">
-                <div class="max-w-[610px] px-[10px] py-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div className="max-w-[610px] px-[10px] py-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                   <a href="#">
-                    <img class="rounded-t-lg" src={image3} alt="" />
+                    <img className="rounded-t-lg" src={image3} alt="" />
                   </a>
-                  <div class="p-5">
+                  <div className="p-5">
                     <p className="text-[#999999] text-[10px] mb-[18px]">
                       Graphic Design
                     </p>
 
-                    <h5 class="mb-2 text-[19px] uppercase font-normal tracking-tight text-[#000000] dark:text-white">
+                    <h5 className="mb-2 text-[19px] uppercase font-normal tracking-tight text-[#000000] dark:text-white">
                       A Brief History of the FIFA World Cup Logo
                     </h5>
 
-                    <p class="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400 uppercase">
+                    <p className="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400 uppercase">
                       By Clem Onojeghuo
                     </p>
                   </div>
                 </div>
 
-                <div class="max-w-[610px] px-[10px] py-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div className="max-w-[610px] px-[10px] py-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                   <a href="#">
-                    <img class="rounded-t-lg" src={image3} alt="" />
+                    <img className="rounded-t-lg" src={image3} alt="" />
                   </a>
-                  <div class="p-5">
+                  <div className="p-5">
                     <p className="text-[#999999] text-[10px] mb-[18px]">
                       Graphic Design
                     </p>
 
-                    <h5 class="mb-2 text-[19px] uppercase font-normal tracking-tight text-[#000000] dark:text-white">
+                    <h5 className="mb-2 text-[19px] uppercase font-normal tracking-tight text-[#000000] dark:text-white">
                       A Brief History of the FIFA World Cup Logo
                     </h5>
 
-                    <p class="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400 uppercase">
+                    <p className="mb-3 text-[10px] font-bold text-[#000] dark:text-gray-400 uppercase">
                       By Clem Onojeghuo
                     </p>
                   </div>
